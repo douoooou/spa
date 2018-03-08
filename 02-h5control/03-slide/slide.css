@@ -1,0 +1,14 @@
+body{
+  margin-left:100px;
+  margin-top:80px;
+}
+
+#r{
+  width:300px;
+}
+
+#s{
+  color:red;
+  font-size:25px;
+  font-weight:bolder;
+}
