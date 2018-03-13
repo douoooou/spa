@@ -4,18 +4,25 @@ var stop=document.getElementById('stop');
 var reset=document.getElementById('reset');
 var timer=0;
 function startPlay(){
+  if(timer!=0){
 
-  timer=setInterval(function(){
+  }else{
+  
+   timer=setInterval(function(){
            if(d.value!=100){
              d.value++;
            }
          else d.value=0;
 
   },100);
+
+  
+  }
 }
 
 function stopPlay(){
    clearInterval(timer); 
+   timer=0;
 }
 
 function resetPlay(){
