@@ -5,20 +5,22 @@ var circum=document.getElementById('cir');
 var area=document.getElementById('are');
 var warn=document.getElementById('warn');
 var warnn=document.getElementById('warnn');
-var focus= document.getElementById('wid').focus();
 
-width.keypress=function(e) {
-      validateKey(e);       
-};
+function validateKey(e) {
+  if(/[abcdf-zABCDF-Z`~!@#$%^&*()=_+\[\]{}|;:'",<>/?\\]/.test(e.key)){
+    e.preventDefault();
+  }
+}
 
-height.keypress=function(e) {
-      validateKey(e);
+
+width.onkeypress=function (e) {
+      validateKey(e);      
+  };
+
+height.onkeypress=function(e) {
+   validateKey(e);
         
 };
-//function validateKey(e) {
-//     if(/[abcdf-zABCDF-Z`~!@#$%^&*()=_+\[\]{}|;:'",<>/?\\]/.test(e.key)) e.preventDefault();"'`])
-//}
-
 
 width.onblur=function(){
   if(width.value==""){
@@ -50,13 +52,11 @@ function roundFractional(x, n) {
         return Math.round(x * Math.pow(10, n)) / Math.pow(10, n);
           
 }
-
-
- btn.onclick=function (){
+btn.onclick=function (){
       warn.innerHTML="";
       warnn.innerHTML="";
       circum.value=roundFractional((width.value)*2+(height.value)*2,1);
       area.value=roundFractional(width.value*height.value,1);
-  
+
 } 
 
