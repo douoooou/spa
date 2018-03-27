@@ -1,14 +1,12 @@
 
 
-
-
 $(function() {
     var xData = [],
     yData = [];
 
 for(var i = 0; i <= 1; i += 0.1) {
       xData.push(roundFractional(i, 1));
-      yData.push(roundFractional(h(i), 2));
+          yData.push(roundFractional(h(i), 2));
             
 }
 
@@ -20,9 +18,9 @@ for(var i = 0; i <= 1; i += 0.1) {
       
     },
     tooltip: {},
-    legend: {
-    data:['信息量']
-       
+legend: {
+        data:['信息量']
+      
 },
   xAxis: {
           data: xData
@@ -30,10 +28,10 @@ for(var i = 0; i <= 1; i += 0.1) {
   },
       yAxis: {},
       series: [{
-      name: '信息量',
-      type: 'line',
-      smooth: 'true',
-      data: yData
+              name: '信息量',
+                    type: 'line',
+                          smooth: 'true',
+                                data: yData
                                       
       }]
   
@@ -76,3 +74,5 @@ function plog(p) {
 }
 
 });
+
+
