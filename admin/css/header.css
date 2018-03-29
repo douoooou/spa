@@ -1,0 +1,24 @@
+.admin-app-header{
+    width:100%;
+    height:70px;
+    background:white;
+    border-bottom:5px solid #1aa094;
+
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+#admin-app{
+ width:100%;
+ height:100%;
+ background:#f2f2f2;
+}
+.admin-app-header .title{
+  width:200px;
+}
+.admin-app-header .title{
+  font-size:20px;
+}
